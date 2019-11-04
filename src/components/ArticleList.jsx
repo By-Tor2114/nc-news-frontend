@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import "./ArticleList.css";
 
 class ArticleList extends Component {
   state = {
@@ -10,7 +11,7 @@ class ArticleList extends Component {
     const { articles, isLoading } = this.state;
 
     return (
-      <div>
+      <div className="ArticleList">
         {isLoading && <h2>Page Loading...</h2>}
         {!isLoading && (
           <ul>
@@ -35,6 +36,14 @@ class ArticleList extends Component {
     api.getArticles().then(({ articles }) => {
       this.setState({ articles, isLoading: false });
     });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.topic_slug !== prevProps.topic_slug) {
+      api.getArticles(this.props.topic_slug).then(({ articles }) => {
+        this.setState({ articles, isLoading: false });
+      });
+    }
   }
 }
 

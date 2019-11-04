@@ -13,6 +13,7 @@ function App() {
       <Nav />
       <Router>
         <ArticleList path="/" />
+        <ArticleList path="/:topic_slug" />
       </Router>
       <Footer />
     </div>

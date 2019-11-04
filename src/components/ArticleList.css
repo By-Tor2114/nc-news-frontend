@@ -1,0 +1,11 @@
+.ArticleList ul {
+  min-width: 65%;
+  max-width: 75%;
+  margin: auto;
+}
+
+.ArticleList li {
+  list-style: none;
+  border: 1px solid black;
+  margin: 1rem;
+}
