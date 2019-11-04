@@ -1,8 +1,22 @@
 import React from "react";
 import "./App.css";
+import { Router } from "@reach/router";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import ArticleList from "./components/ArticleList";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+      <Nav />
+      <Router>
+        <ArticleList path="/" />
+      </Router>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
