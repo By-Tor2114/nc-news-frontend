@@ -28,6 +28,7 @@ class ArticleComments extends Component {
               <h4>Posted on: {helper.dateFormat(comment.created_at)}</h4>
               <p>{comment.body}</p>
               <h4>Vote Count: {comment.votes}</h4>
+              <button>Delete Comment</button>
             </li>
           );
         })}

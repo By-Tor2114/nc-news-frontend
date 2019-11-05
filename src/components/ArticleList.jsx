@@ -7,6 +7,8 @@ import { Link } from "@reach/router";
 class ArticleList extends Component {
   state = {
     articles: [],
+    sort_by: "",
+    order: "",
     isLoading: true
   };
   render() {
@@ -16,19 +18,19 @@ class ArticleList extends Component {
       <div className="ArticleList">
         {isLoading && <h2>Page Loading...</h2>}
         {!isLoading && (
-          <div>
+          <form onSubmit={this.getSortedArticles}>
             <span>Sort by: </span>
-            <select
-              name="sort"
-              onChange={event => {
-                this.sortBy(event);
-              }}
-            >
+            <select name="sort" onChange={this.sortBy}>
               <option value="created_at">Date Posted</option>
               <option value="comment_count">Comment Count</option>
-              <option value="votes">Votes</option>
+              <option value="votes">Votes </option>
             </select>
-          </div>
+            <select name="order" onChange={this.orderBy}>
+              <option value="asc">asc</option>
+              <option value="desc">desc</option>
+            </select>
+            <button className="Go">Go!</button>
+          </form>
         )}
         {!isLoading && (
           <ul>
@@ -70,11 +72,20 @@ class ArticleList extends Component {
   }
 
   sortBy = event => {
-    const val = event.target.value;
-    this.setState(currentState => {
-      const sorted = currentState.articles.sort((a, b) => b[val] - a[val]);
-      return { articles: sorted };
-    });
+    this.setState({ sort_by: event.target.value });
+  };
+
+  orderBy = event => {
+    this.setState({ order: event.target.value });
+  };
+
+  getSortedArticles = event => {
+    event.preventDefault();
+    api
+      .getArticles(this.props.topic_slug, this.state.sort_by, this.state.order)
+      .then(({ articles }) => {
+        this.setState({ articles });
+      });
   };
 }
 

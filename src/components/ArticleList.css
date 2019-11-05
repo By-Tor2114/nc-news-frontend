@@ -15,6 +15,14 @@
   margin-bottom: 50px;
 }
 
+.ArticleList form select {
+  margin: 2px;
+}
+
+.ArticleList form .Go {
+  width: 40px;
+}
+
 @media (max-width: 380px) {
   .ArticleList {
     min-width: 90%;

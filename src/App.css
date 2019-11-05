@@ -22,7 +22,6 @@
 
 button {
   cursor: pointer;
-  min-width: 110px;
 }
 
 button:hover {

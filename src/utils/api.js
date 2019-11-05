@@ -1,9 +1,11 @@
 const axios = require("axios");
 const baseURL = "https://by-tor2114-nc-news.herokuapp.com/api";
 
-exports.getArticles = topic => {
+exports.getArticles = (topic, sort_by, order) => {
   return axios
-    .get(`${baseURL}/articles`, { params: { topic } })
+    .get(`${baseURL}/articles`, {
+      params: { topic, sort_by: sort_by, order: order }
+    })
     .then(({ data }) => {
       return data;
     });
