@@ -22,4 +22,9 @@
 
 button {
   cursor: pointer;
+  min-width: 110px;
+}
+
+button:hover {
+  background: rgb(241, 241, 241);
 }

@@ -11,6 +11,14 @@ class ArticleComments extends Component {
     const { comments } = this.state;
     return (
       <ul className="ArticleComments">
+        <h2>Post New Comment:</h2>
+        <form>
+          <label>
+            <input type="text" />
+            <button>Submit</button>
+          </label>
+        </form>
+        <h2>Comments</h2>
         {comments.map(comment => {
           return (
             <li key={comment.comment_id}>
