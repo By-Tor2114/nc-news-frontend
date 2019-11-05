@@ -1,0 +1,10 @@
+.ArticleComments li {
+  list-style: none;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.ArticleComments {
+  padding: 0;
+  margin-bottom: 100px;
+}

@@ -11,3 +11,15 @@
   padding: 0.5rem;
   height: 4vh;
 }
+
+.Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgb(235, 235, 235);
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}

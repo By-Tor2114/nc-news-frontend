@@ -14,3 +14,11 @@ exports.getIndividualArticle = id => {
     return data;
   });
 };
+
+exports.getArticleComments = id => {
+  console.log(id);
+
+  return axios.get(`${baseURL}/articles/${id}/comments`).then(({ data }) => {
+    return data;
+  });
+};

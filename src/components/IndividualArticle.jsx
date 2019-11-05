@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
+import { Link } from "@reach/router";
+import "./IndividualArticle.css";
 
 class IndividualArticle extends Component {
   state = { article: {}, isLoading: false };
@@ -11,16 +13,22 @@ class IndividualArticle extends Component {
       body,
       created_at,
       votes,
-      topic
+      topic,
+      article_id
     } = this.state.article;
     return (
-      <div>
+      <div className="IndividualArticle">
         <h2>Author: {author}</h2>
         <h3>Article Title: {title}</h3>
         <h4>Posted on: {helper.dateFormat(created_at)}</h4>
         <h4>Topic: {topic}</h4>
         <p>{body}</p>
         <h4>Vote Count: {votes}</h4>
+        <h4>
+          <Link to={`/articles/${article_id}/comments`}>
+            <button> Go To Article Comments</button>
+          </Link>
+        </h4>
       </div>
     );
   }

@@ -5,26 +5,29 @@ import "./Nav.css";
 const Nav = () => {
   return (
     <ul className="Nav-navbar">
-      <p>Filter by Topic: </p>
+      <p>Choose Article Topic: </p>
       <li>
-        <button>
-          <Link to="/"> All </Link>
-        </button>
+        <Link to="/">
+          <button>All </button>
+        </Link>
       </li>
       <li>
-        <button>
-          <Link to="/cooking"> Cooking </Link>
-        </button>
+        <Link to="/cooking">
+          {" "}
+          <button>Cooking</button>{" "}
+        </Link>
       </li>
       <li>
-        <button>
-          <Link to="/coding"> Coding</Link>
-        </button>
+        <Link to="/coding">
+          {" "}
+          <button>Coding</button>
+        </Link>
       </li>
       <li>
-        <button>
-          <Link to="/football"> Football </Link>
-        </button>
+        <Link to="/football">
+          {" "}
+          <button>Football</button>{" "}
+        </Link>
       </li>
     </ul>
   );

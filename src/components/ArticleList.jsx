@@ -25,11 +25,9 @@ class ArticleList extends Component {
                   <h4>Comment Count: {article.comment_count}</h4>
                   <h4>Votes: {article.votes}</h4>
                   <h4>
-                    <button>
-                      <Link to={`/articles/${article.article_id}`}>
-                        Click For Full Article
-                      </Link>
-                    </button>
+                    <Link to={`/articles/${article.article_id}`}>
+                      <button> Click For Full Article</button>
+                    </Link>
                   </h4>
                 </li>
               );
