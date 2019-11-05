@@ -1,11 +1,23 @@
 .ArticleList ul {
-  min-width: 65%;
-  max-width: 75%;
   margin: auto;
+  padding: 0;
 }
 
 .ArticleList li {
   list-style: none;
   border: 1px solid black;
   margin: 1rem;
+}
+
+.ArticleList {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (max-width: 380px) {
+  .ArticleList {
+    min-width: 90%;
+    margin: auto;
+  }
 }

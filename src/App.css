@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgb(235, 235, 235);
+  margin: 0;
+  padding: 0.5rem;
+  height: 4vh;
+}

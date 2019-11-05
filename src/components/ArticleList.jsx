@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import "./ArticleList.css";
+import { Link } from "@reach/router";
 
 class ArticleList extends Component {
   state = {
@@ -23,6 +24,13 @@ class ArticleList extends Component {
                   <h4>Topic: {article.topic}</h4>
                   <h4>Comment Count: {article.comment_count}</h4>
                   <h4>Votes: {article.votes}</h4>
+                  <h4>
+                    <button>
+                      <Link to={`/articles/${article.article_id}`}>
+                        Click For Full Article
+                      </Link>
+                    </button>
+                  </h4>
                 </li>
               );
             })}

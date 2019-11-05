@@ -12,3 +12,14 @@
 .Nav-navbar a {
   text-decoration: none;
 }
+
+@media (max-width: 420px) {
+  .Nav-navbar {
+    display: block;
+  }
+
+  .Nav-navbar li {
+    list-style: none;
+    padding: 0.2rem;
+  }
+}
