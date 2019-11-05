@@ -10,8 +10,6 @@ exports.getArticles = topic => {
 };
 
 exports.getIndividualArticle = id => {
-  console.log(id, "this is id");
-
   return axios.get(`${baseURL}/articles/${id}`).then(({ data }) => {
     return data;
   });
