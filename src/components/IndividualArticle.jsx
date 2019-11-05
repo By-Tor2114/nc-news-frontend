@@ -20,7 +20,7 @@ class IndividualArticle extends Component {
       <div className="IndividualArticle">
         <h2>Author: {author}</h2>
         <h3>Article Title: {title}</h3>
-        <h4>Posted on: {helper.dateFormat(created_at)}</h4>
+        <h4>Posted On: {helper.dateFormat(created_at)}</h4>
         <h4>Topic: {topic}</h4>
         <p>{body}</p>
         <h4>Vote Count: {votes}</h4>

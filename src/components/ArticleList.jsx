@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import * as helper from "../utils/helperFuncs";
 import "./ArticleList.css";
 import { Link } from "@reach/router";
 
@@ -15,11 +16,27 @@ class ArticleList extends Component {
       <div className="ArticleList">
         {isLoading && <h2>Page Loading...</h2>}
         {!isLoading && (
+          <div>
+            <span>Sort by: </span>
+            <select
+              name="sort"
+              onChange={event => {
+                this.sortBy(event);
+              }}
+            >
+              <option value="created_at">Date Posted</option>
+              <option value="comment_count">Comment Count</option>
+              <option value="votes">Votes</option>
+            </select>
+          </div>
+        )}
+        {!isLoading && (
           <ul>
             {articles.map(article => {
               return (
                 <li key={article.article_id}>
                   <h3>Article Title: {article.title}</h3>
+                  <h4>Posted On: {helper.dateFormat(article.created_at)}</h4>
                   <h4>Author: {article.author}</h4>
                   <h4>Topic: {article.topic}</h4>
                   <h4>Comment Count: {article.comment_count}</h4>
@@ -51,6 +68,14 @@ class ArticleList extends Component {
       });
     }
   }
+
+  sortBy = event => {
+    const val = event.target.value;
+    this.setState(currentState => {
+      const sorted = currentState.articles.sort((a, b) => b[val] - a[val]);
+      return { articles: sorted };
+    });
+  };
 }
 
 export default ArticleList;
