@@ -4,17 +4,19 @@ import * as helper from "../utils/helperFuncs";
 import "./ArticleComments.css";
 
 class ArticleComments extends Component {
-  state = { comments: [] };
+  state = { comments: [], commentInput: "" };
   render() {
-    console.log(this.props);
-
-    const { comments } = this.state;
+    const { comments, commentInput } = this.state;
     return (
       <ul className="ArticleComments">
         <h2>Post New Comment:</h2>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" />
+            <input
+              type="text"
+              onChange={this.handleChange}
+              value={commentInput}
+            />
             <button>Submit</button>
           </label>
         </form>
@@ -37,6 +39,28 @@ class ArticleComments extends Component {
       this.setState({ comments });
     });
   }
+
+  handleChange = event => {
+    this.setState({ commentInput: event.target.value });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    api
+      .postComment(
+        this.state.commentInput,
+        this.props.username,
+        this.props.article_id
+      )
+      .then(({ comment }) => {
+        this.setState(currentState => {
+          return {
+            comments: [comment, ...currentState.comments],
+            commentInput: ""
+          };
+        });
+      });
+  };
 }
 
 export default ArticleComments;

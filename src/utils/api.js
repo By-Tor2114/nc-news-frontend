@@ -16,9 +16,18 @@ exports.getIndividualArticle = id => {
 };
 
 exports.getArticleComments = id => {
-  console.log(id);
-
   return axios.get(`${baseURL}/articles/${id}/comments`).then(({ data }) => {
     return data;
   });
+};
+
+exports.postComment = (comment, user, article_id) => {
+  return axios
+    .post(`${baseURL}/articles/${article_id}/comments`, {
+      username: user,
+      body: comment
+    })
+    .then(({ data }) => {
+      return data;
+    });
 };
