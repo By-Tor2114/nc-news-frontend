@@ -18,6 +18,7 @@
     margin: 0rem;
     align-self: center;
     padding: 5px;
+    min-width: 65px;
   }
 
   .Voter h4 {

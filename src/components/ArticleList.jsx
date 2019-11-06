@@ -9,8 +9,8 @@ import HandleErrors from "./HandleErrors";
 class ArticleList extends Component {
   state = {
     articles: [],
-    sort_by: "",
-    order: "",
+    sort_by: "created_at",
+    order: "asc",
     isLoading: true,
     err: null
   };

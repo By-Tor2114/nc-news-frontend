@@ -13,12 +13,14 @@ class ArticleComments extends Component {
         <h2>Post New Comment:</h2>
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input
+            <textarea
               type="text"
               onChange={this.handleChange}
               value={commentInput}
               required
-            />
+            >
+              {" "}
+            </textarea>
             <button>Submit</button>
           </label>
         </form>

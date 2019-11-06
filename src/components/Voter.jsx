@@ -14,7 +14,7 @@ class Voter extends Component {
           value="1"
           disabled={this.state.voteIncrement > 0 && true}
         >
-          Up Vote :)
+          Up Vote
         </button>
         <h4>Vote Count: {this.props.votes + this.state.voteIncrement}</h4>
         <button
@@ -22,7 +22,7 @@ class Voter extends Component {
           value="-1"
           disabled={this.state.voteIncrement < 0 && true}
         >
-          Down Vote :(
+          Down Vote
         </button>
       </div>
     );
