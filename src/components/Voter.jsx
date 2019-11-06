@@ -31,11 +31,7 @@ class Voter extends Component {
   handleVote = event => {
     const voteChange = event.target.value;
     api.sendVote(this.props.type, this.props.id, voteChange).then(() => {
-      console.log("here");
-
       this.setState(currentState => {
-        console.log("in state");
-
         return { voteIncrement: currentState.voteIncrement + +voteChange };
       });
     });

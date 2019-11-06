@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
 import "./ArticleComments.css";
+import Voter from "./Voter";
 
 class ArticleComments extends Component {
   state = { comments: [], commentInput: "" };
@@ -27,6 +28,11 @@ class ArticleComments extends Component {
               <h2>Author: {comment.author}</h2>
               <h4>Posted on: {helper.dateFormat(comment.created_at)}</h4>
               <p>{comment.body}</p>
+              <Voter
+                type="comments"
+                id={comment.comment_id}
+                votes={comment.votes}
+              />
               <h4>Vote Count: {comment.votes}</h4>
               {this.props.username === comment.author && (
                 <button
