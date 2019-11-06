@@ -3,6 +3,7 @@ import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
 import "./ArticleList.css";
 import { Link } from "@reach/router";
+import Voter from "./Voter";
 
 class ArticleList extends Component {
   state = {
@@ -42,7 +43,11 @@ class ArticleList extends Component {
                   <h4>Author: {article.author}</h4>
                   <h4>Topic: {article.topic}</h4>
                   <h4>Comment Count: {article.comment_count}</h4>
-                  <h4>Votes: {article.votes}</h4>
+                  <Voter
+                    type="articles"
+                    id={article.article_id}
+                    votes={article.votes}
+                  />
                   <h4>
                     <Link to={`/articles/${article.article_id}`}>
                       <button> Click For Full Article</button>

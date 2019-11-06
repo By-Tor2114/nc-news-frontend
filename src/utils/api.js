@@ -37,3 +37,8 @@ exports.postComment = (comment, user, article_id) => {
 exports.deleteComment = comment_id => {
   return axios.delete(`${baseURL}/comments/${comment_id}`).then(res => {});
 };
+
+exports.sendVote = (type, id, value) => {
+  console.log(type, id, value, "in api");
+  return axios.patch(`${baseURL}/${type}/${id}`, { inc_votes: value });
+};
