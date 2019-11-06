@@ -28,7 +28,15 @@ class ArticleComments extends Component {
               <h4>Posted on: {helper.dateFormat(comment.created_at)}</h4>
               <p>{comment.body}</p>
               <h4>Vote Count: {comment.votes}</h4>
-              <button>Delete Comment</button>
+              {this.props.username === comment.author && (
+                <button
+                  onClick={() => {
+                    this.removeComment(comment.comment_id);
+                  }}
+                >
+                  Delete Comment
+                </button>
+              )}
             </li>
           );
         })}
@@ -61,6 +69,14 @@ class ArticleComments extends Component {
           };
         });
       });
+  };
+
+  removeComment = comment_id => {
+    api.deleteComment(comment_id).then(() => {
+      api.getArticleComments(this.props.article_id).then(({ comments }) => {
+        this.setState({ comments });
+      });
+    });
   };
 }
 
