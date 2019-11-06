@@ -17,6 +17,7 @@ class ArticleComments extends Component {
               type="text"
               onChange={this.handleChange}
               value={commentInput}
+              required
             />
             <button>Submit</button>
           </label>

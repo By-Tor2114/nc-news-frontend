@@ -4,20 +4,23 @@ import * as helper from "../utils/helperFuncs";
 import "./ArticleList.css";
 import { Link } from "@reach/router";
 import Voter from "./Voter";
+import HandleErrors from "./HandleErrors";
 
 class ArticleList extends Component {
   state = {
     articles: [],
     sort_by: "",
     order: "",
-    isLoading: true
+    isLoading: true,
+    err: null
   };
   render() {
-    const { articles, isLoading } = this.state;
+    const { articles, isLoading, err } = this.state;
 
     return (
       <div className="ArticleList">
-        {isLoading && <h2>Page Loading...</h2>}
+        {isLoading && !err && <h2>Page Loading...</h2>}
+        {err && <HandleErrors error={err.response.data.msg} />}
         {!isLoading && (
           <form onSubmit={this.getSortedArticles}>
             <span>Sort by: </span>
@@ -33,7 +36,7 @@ class ArticleList extends Component {
             <button className="Go">Go!</button>
           </form>
         )}
-        {!isLoading && (
+        {!isLoading && !err && (
           <ul>
             {articles.map(article => {
               return (
@@ -63,15 +66,21 @@ class ArticleList extends Component {
   }
 
   componentDidMount() {
-    api.getArticles().then(({ articles }) => {
-      this.setState({ articles, isLoading: false });
-    });
+    api
+      .getArticles(this.props.topic_slug)
+      .then(({ articles }) => {
+        this.setState({ articles, isLoading: false });
+      })
+      .catch(err => {
+        console.dir(err);
+        this.setState({ err });
+      });
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.topic_slug !== prevProps.topic_slug) {
       api.getArticles(this.props.topic_slug).then(({ articles }) => {
-        this.setState({ articles, isLoading: false });
+        this.setState({ articles, isLoading: false, err: null });
       });
     }
   }

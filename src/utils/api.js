@@ -39,6 +39,5 @@ exports.deleteComment = comment_id => {
 };
 
 exports.sendVote = (type, id, value) => {
-  console.log(type, id, value, "in api");
   return axios.patch(`${baseURL}/${type}/${id}`, { inc_votes: value });
 };

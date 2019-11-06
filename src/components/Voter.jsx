@@ -13,14 +13,14 @@ class Voter extends Component {
         <button
           onClick={this.handleVote}
           value="1"
-          disabled={this.state.voteIncrement > 0 && "true"}
+          disabled={this.state.voteIncrement > 0 && true}
         >
           Up Vote :)
         </button>
         <button
           onClick={this.handleVote}
           value="-1"
-          disabled={this.state.voteIncrement < 0 && "true"}
+          disabled={this.state.voteIncrement < 0 && true}
         >
           Down Vote :(
         </button>

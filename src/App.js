@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ArticleList from "./components/ArticleList";
 import IndividualArticle from "./components/IndividualArticle";
 import ArticleComments from "./components/ArticleComments";
+import HandleErrors from "./components/HandleErrors";
 
 class App extends Component {
   state = { username: "weegembump" };
@@ -17,6 +18,7 @@ class App extends Component {
         <Header username={username} />
         <Nav />
         <Router primary={false}>
+          <HandleErrors default />
           <ArticleList path="/" />
           <ArticleList path="/:topic_slug" />
           <IndividualArticle path="/articles/:article_id" />
