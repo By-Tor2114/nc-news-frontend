@@ -34,7 +34,6 @@ class ArticleComments extends Component {
                 id={comment.comment_id}
                 votes={comment.votes}
               />
-              <h4>Vote Count: {comment.votes}</h4>
               {this.props.username === comment.author && (
                 <button
                   onClick={() => {
