@@ -9,7 +9,6 @@ class Voter extends Component {
   render() {
     return (
       <div className="Voter">
-        <h4>Vote Count: {this.props.votes + this.state.voteIncrement}</h4>
         <button
           onClick={this.handleVote}
           value="1"
@@ -17,6 +16,7 @@ class Voter extends Component {
         >
           Up Vote :)
         </button>
+        <h4>Vote Count: {this.props.votes + this.state.voteIncrement}</h4>
         <button
           onClick={this.handleVote}
           value="-1"

@@ -1,29 +1,55 @@
 .App {
   text-align: center;
+  margin-top: -11px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: rgb(235, 235, 235);
+  background: rgb(0, 0, 0);
+  color: white;
   margin: 0;
-  padding: 0.5rem;
+  padding-top: 1rem;
   height: 4vh;
+}
+
+@media (max-width: 380px) {
+  padding-top: 0.5rem;
 }
 
 .Header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgb(235, 235, 235);
+  background: rgb(0, 0, 0);
+  color: white;
   margin: 0;
 }
 
 button {
   cursor: pointer;
+  padding: 5px;
+  background: #2d74c5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 380px) {
+  button {
+    padding: 4px;
+  }
 }
 
 button:hover {
-  background: rgb(241, 241, 241);
+  background: #0270ac;
+}
+
+/* Utility Classes */
+
+.text-primary {
+  color: #00a8ff;
 }

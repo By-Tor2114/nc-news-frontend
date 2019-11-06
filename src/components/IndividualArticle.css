@@ -1,3 +1,16 @@
 .IndividualArticle {
   margin-bottom: 100px;
+  background: #ffffff;
+  width: 70%;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 3px 8px 5px 8px darkgray;
+  padding: 5px;
+}
+
+@media (max-width: 380px) {
+  .IndividualArticle {
+    width: 90%;
+    margin-bottom: 65px;
+  }
 }

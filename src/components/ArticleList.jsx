@@ -72,7 +72,6 @@ class ArticleList extends Component {
         this.setState({ articles, isLoading: false });
       })
       .catch(err => {
-        console.dir(err);
         this.setState({ err });
       });
   }

@@ -1,3 +1,26 @@
 .Voter button {
   margin: 0.2rem;
+  align-self: center;
+  padding: 10px;
+}
+
+.Voter {
+  display: flex;
+  justify-content: center;
+}
+
+.Voter h4 {
+  margin: 10px 20px;
+}
+
+@media (max-width: 380px) {
+  .Voter button {
+    margin: 0rem;
+    align-self: center;
+    padding: 5px;
+  }
+
+  .Voter h4 {
+    margin: 5px 10px;
+  }
 }

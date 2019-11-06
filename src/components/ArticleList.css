@@ -4,8 +4,9 @@
 
 .ArticleList li {
   list-style: none;
-  border: 1px solid black;
-  margin: 1rem;
+  margin: 1.5rem;
+  box-shadow: 3px 8px 5px 8px darkgray;
+  padding: 10px;
 }
 
 .ArticleList {
@@ -22,12 +23,13 @@
 
 .ArticleList form .Go {
   width: 40px;
+  padding: 2px;
 }
 
 @media (max-width: 380px) {
   .ArticleList {
     min-width: 90%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
   }
 }
