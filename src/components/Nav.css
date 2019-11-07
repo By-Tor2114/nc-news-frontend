@@ -6,7 +6,7 @@
 .Nav-navbar ul {
   display: flex;
   margin: 20px auto;
-  width: 50%;
+  justify-content: center;
 }
 
 .Nav-navbar li {
@@ -38,8 +38,8 @@
   }
   .Nav-navbar ul {
     display: flex;
+    justify-content: center;
     margin: 10px auto;
-    width: 45vh;
     padding: 0;
   }
 

@@ -19,3 +19,17 @@
     margin-bottom: 65px;
   }
 }
+
+@media (max-width: 820px) {
+  .IndividualArticle {
+    width: 90%;
+    margin-bottom: 95px;
+  }
+}
+
+@media (max-height: 770px) {
+  .IndividualArticle {
+    width: 90%;
+    margin-bottom: 105px;
+  }
+}

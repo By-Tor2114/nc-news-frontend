@@ -28,6 +28,10 @@
   margin: 0;
 }
 
+.Header span {
+  font-weight: bold;
+}
+
 button {
   cursor: pointer;
   padding: 5px;
