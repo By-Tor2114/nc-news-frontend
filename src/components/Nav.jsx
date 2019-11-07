@@ -14,20 +14,17 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/cooking">
-            {" "}
-            <button>Cooking</button>{" "}
+            <button>Cooking</button>
           </Link>
         </li>
         <li>
           <Link to="/coding">
-            {" "}
             <button>Coding</button>
           </Link>
         </li>
         <li>
           <Link to="/football">
-            {" "}
-            <button>Football</button>{" "}
+            <button>Football</button>
           </Link>
         </li>
       </ul>

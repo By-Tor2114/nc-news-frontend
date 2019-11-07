@@ -2,7 +2,7 @@ import React from "react";
 import "../css/Header.css";
 import { Link } from "@reach/router";
 
-const Header = props => {
+const Header = ({ username }) => {
   return (
     <div className="Header">
       <Link to="/">
@@ -11,7 +11,7 @@ const Header = props => {
         </h1>
       </Link>
       <p>
-        Logged in as: <span className="text-primary">{props.username}</span>
+        Logged in as: <span className="text-primary">{username}</span>
       </p>
     </div>
   );
