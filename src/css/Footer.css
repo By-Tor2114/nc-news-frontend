@@ -1,10 +1,25 @@
 .Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
   background: rgb(0, 0, 0);
   color: white;
   margin: 0;
-  padding-top: 1rem;
   height: 4vh;
+}
+
+@media (max-width: 380px) {
+  .Footer {
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Footer h5 {
+    margin-bottom: 10px;
+  }
 }
