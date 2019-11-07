@@ -13,13 +13,13 @@
 
 @media (max-width: 380px) {
   .Footer {
-    height: 2vh;
+    height: 3vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .Footer h5 {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
 }
