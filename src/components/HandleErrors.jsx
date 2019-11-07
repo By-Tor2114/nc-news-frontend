@@ -3,8 +3,6 @@ import "../css/HandleErrors.css";
 
 class HandleErrors extends Component {
   render() {
-    console.log(this.props.error);
-
     return (
       <div className="HandleErrors">
         <h2>

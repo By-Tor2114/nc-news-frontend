@@ -4,6 +4,7 @@
   padding-bottom: 20px;
   box-shadow: 3px 8px 5px 8px darkgray;
   padding: 1rem;
+  border-radius: 5px;
 }
 
 .ArticleComments {
@@ -33,6 +34,11 @@
     max-width: 790%;
     padding: 0;
     margin-bottom: 100px;
+  }
+
+  .ArticleComments textarea {
+    border-radius: 5px;
+    border: 1px solid #2d74c5;
   }
 
   .ArticleComments p {

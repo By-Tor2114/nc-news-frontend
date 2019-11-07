@@ -11,6 +11,7 @@ button {
   font-weight: bold;
   border: none;
   border-radius: 5px;
+  box-shadow: 3px 3px 3px #123e72;
 }
 
 @media (max-width: 380px) {

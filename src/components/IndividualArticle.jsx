@@ -4,18 +4,18 @@ import * as helper from "../utils/helperFuncs";
 import { Link } from "@reach/router";
 import "../css/IndividualArticle.css";
 import HandleErrors from "./HandleErrors";
+import Voter from "./Voter";
 
 class IndividualArticle extends Component {
   state = { article: {}, isLoading: true, err: null };
   render() {
-    const { isLoading, err } = this.state;
+    const { article, isLoading, err } = this.state;
 
     const {
       author,
       title,
       body,
       created_at,
-      votes,
       topic,
       article_id
     } = this.state.article;
@@ -29,7 +29,11 @@ class IndividualArticle extends Component {
             <h4>Posted On: {helper.dateFormat(created_at)}</h4>
             <h4>Topic: {topic}</h4>
             <p>{body}</p>
-            <h4>Vote Count: {votes}</h4>
+            <Voter
+              type="articles"
+              id={article.article_id}
+              votes={article.votes}
+            />
             <h4>
               <Link to={`/articles/${article_id}/comments`}>
                 <button> Go To Article Comments</button>

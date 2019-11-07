@@ -16,6 +16,13 @@ Hosted version of the backend: https://by-tor2114-nc-news.herokuapp.com/api
 
 ```
 npm i
+
+Dependencies:
+    "@reach/router": "^1.2.1",
+    "axios": "^0.19.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
 ```
 
 2. #### With dependencies installed, the app can be launched on React's local server by running the following command:
