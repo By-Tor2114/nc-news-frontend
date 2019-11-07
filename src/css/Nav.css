@@ -25,6 +25,7 @@
 .Nav-navbar button {
   min-width: 110px;
   padding: 10px;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 420px) {
@@ -35,6 +36,8 @@
   .Nav-navbar button {
     min-width: 70px;
     padding: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
   }
   .Nav-navbar ul {
     display: flex;

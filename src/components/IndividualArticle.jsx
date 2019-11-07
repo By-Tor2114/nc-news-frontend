@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
 import { Link } from "@reach/router";
-import "./IndividualArticle.css";
+import "../css/IndividualArticle.css";
 import HandleErrors from "./HandleErrors";
 
 class IndividualArticle extends Component {

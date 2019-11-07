@@ -22,11 +22,21 @@
   font-size: 2rem;
 }
 
+.ArticleComments p {
+  width: 70%;
+  margin: 40px auto;
+}
+
 @media (max-width: 380px) {
   .ArticleComments {
     margin: auto;
     max-width: 790%;
     padding: 0;
     margin-bottom: 100px;
+  }
+
+  .ArticleComments p {
+    width: 100%;
+    margin: 40px auto;
   }
 }

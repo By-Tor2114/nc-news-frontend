@@ -1,0 +1,12 @@
+.Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  color: white;
+  margin: 0;
+}
+
+.Header span {
+  font-weight: bold;
+}

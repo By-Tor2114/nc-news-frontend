@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
-import "./ArticleComments.css";
+import "../css/ArticleComments.css";
 import Voter from "./Voter";
 
 class ArticleComments extends Component {

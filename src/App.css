@@ -1,35 +1,6 @@
 .App {
   text-align: center;
-  margin-top: -11px;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.Footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: rgb(0, 0, 0);
-  color: white;
-  margin: 0;
-  padding-top: 1rem;
-  height: 4vh;
-}
-
-@media (max-width: 380px) {
-  padding-top: 0.5rem;
-}
-
-.Header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgb(0, 0, 0);
-  color: white;
-  margin: 0;
-}
-
-.Header span {
-  font-weight: bold;
 }
 
 button {

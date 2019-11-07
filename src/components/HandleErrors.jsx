@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./HandleErrors.css";
+import "../css/HandleErrors.css";
 
 class HandleErrors extends Component {
   render() {

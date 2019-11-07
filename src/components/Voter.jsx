@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Voter.css";
+import "../css/Voter.css";
 import * as api from "../utils/api";
 
 class Voter extends Component {

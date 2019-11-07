@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
-import "./ArticleList.css";
+import "../css/ArticleList.css";
 import { Link } from "@reach/router";
 import Voter from "./Voter";
 import HandleErrors from "./HandleErrors";
