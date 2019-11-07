@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import * as helper from "../utils/helperFuncs";
-import { Link } from "@reach/router";
 import "../css/IndividualArticle.css";
 import HandleErrors from "./HandleErrors";
 import Voter from "./Voter";
+import ArticleComments from "./ArticleComments";
 
 class IndividualArticle extends Component {
   state = { article: {}, isLoading: true, err: null };
@@ -34,11 +34,7 @@ class IndividualArticle extends Component {
               id={article.article_id}
               votes={article.votes}
             />
-            <h4>
-              <Link to={`/articles/${article_id}/comments`}>
-                <button> Go To Article Comments</button>
-              </Link>
-            </h4>
+            <ArticleComments username={author} article_id={article_id} />
           </section>
         )}
       </div>
