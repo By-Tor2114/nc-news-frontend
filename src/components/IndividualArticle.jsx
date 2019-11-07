@@ -24,8 +24,8 @@ class IndividualArticle extends Component {
         {err && <HandleErrors error={this.state.err.response.data.msg} />}
         {!isLoading && !err && (
           <section>
-            <h2>Author: {author}</h2>
-            <h3>Article Title: {title}</h3>
+            <h2>{title}</h2>
+            <h3>Author: {author}</h3>
             <h4>Posted On: {helper.dateFormat(created_at)}</h4>
             <h4>Topic: {topic}</h4>
             <p>{body}</p>

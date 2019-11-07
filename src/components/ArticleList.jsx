@@ -41,7 +41,7 @@ class ArticleList extends Component {
             {articles.map(article => {
               return (
                 <li key={article.article_id}>
-                  <h3>Article Title: {article.title}</h3>
+                  <h2> {article.title}</h2>
                   <h4>Posted On: {helper.dateFormat(article.created_at)}</h4>
                   <h4>Author: {article.author}</h4>
                   <h4>Topic: {article.topic}</h4>
