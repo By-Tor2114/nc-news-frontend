@@ -7,6 +7,11 @@
   margin: 0;
 }
 
+.Header h1,
+.Header p {
+  margin: 10px;
+}
+
 .Header span {
   font-weight: bold;
 }
