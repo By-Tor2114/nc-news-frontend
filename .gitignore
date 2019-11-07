@@ -24,3 +24,8 @@ yarn-error.log*
 
 # default README
 originalREADME.md
+
+# build folder and related netlfiy
+/build
+
+/public/ _redirects

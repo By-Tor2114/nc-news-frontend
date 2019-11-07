@@ -4,7 +4,7 @@ A full stack app built using HTML, CSS and React for the frontend. The backend A
 
 ## Hosted @
 
-Hosted version of the React App: tbc...
+Hosted version of the React App: https://heuristic-nightingale-fc3eae.netlify.com/
 
 GitHub repo for backend: https://github.com/By-Tor2114/nc-news
 
