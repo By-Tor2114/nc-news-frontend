@@ -9,7 +9,6 @@ class Header extends Component {
     loggedInAs: "Please select from below"
   };
   render() {
-    console.log(this.state.loggedInAs, this.props);
     const { users, loggedInAs } = this.state;
     return (
       <div className="Header">
@@ -22,7 +21,9 @@ class Header extends Component {
           Logged in as: <span className="text-primary">{loggedInAs}</span>
         </p>
         <select onChange={this.handleChange}>
-          <option value="Select User">Select User</option>
+          <option value="Select User" selected disabled>
+            Select User
+          </option>
           {users.map((user, index) => {
             return <option key={index}>{user.username}</option>;
           })}
