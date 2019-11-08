@@ -34,7 +34,10 @@ class IndividualArticle extends Component {
               id={article.article_id}
               votes={article.votes}
             />
-            <ArticleComments username={author} article_id={article_id} />
+            <ArticleComments
+              username={this.props.username}
+              article_id={article_id}
+            />
           </section>
         )}
       </div>

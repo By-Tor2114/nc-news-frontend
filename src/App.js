@@ -20,7 +20,7 @@ class App extends Component {
           <HandleErrors default />
           <ArticleList path="/" />
           <ArticleList path="/:topic_slug" />
-          <IndividualArticle path="/articles/:article_id" />
+          <IndividualArticle username={username} path="/articles/:article_id" />
         </Router>
         <Footer />
       </div>

@@ -1,5 +1,5 @@
 const axios = require("axios");
-const baseURL = "https://by-tor2114-nc-news.herokuapp.com/api";
+const baseURL = "https://nc-news-full-stack.herokuapp.com/api";
 
 exports.getArticles = (topic, sort_by, order) => {
   return axios
@@ -40,4 +40,8 @@ exports.deleteComment = comment_id => {
 
 exports.sendVote = (type, id, value) => {
   return axios.patch(`${baseURL}/${type}/${id}`, { inc_votes: value });
+};
+
+exports.getUsers = () => {
+  return axios.get(`${baseURL}/users`).then(({ data }) => {});
 };

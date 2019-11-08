@@ -6,6 +6,7 @@ import Voter from "./Voter";
 
 class ArticleComments extends Component {
   state = { comments: [], commentInput: "", isLoading: true };
+
   render() {
     const { comments, commentInput, isLoading } = this.state;
     return (
