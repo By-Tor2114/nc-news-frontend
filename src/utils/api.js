@@ -43,5 +43,7 @@ exports.sendVote = (type, id, value) => {
 };
 
 exports.getUsers = () => {
-  return axios.get(`${baseURL}/users`).then(({ data }) => {});
+  return axios.get(`${baseURL}/users`).then(({ data }) => {
+    return data;
+  });
 };

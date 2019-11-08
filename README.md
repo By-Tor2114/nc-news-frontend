@@ -8,7 +8,7 @@ Hosted version of the React App: https://elegant-snyder-34f60a.netlify.com
 
 GitHub repo for backend: https://github.com/By-Tor2114/nc-news
 
-Hosted version of the backend: https://by-tor2114-nc-news.herokuapp.com/api
+Hosted version of the backend: https://nc-news-full-stack.herokuapp.com/api
 
 ## Getting Started
 

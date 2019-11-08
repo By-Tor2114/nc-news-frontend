@@ -9,12 +9,12 @@ import IndividualArticle from "./components/IndividualArticle";
 import HandleErrors from "./components/HandleErrors";
 
 class App extends Component {
-  state = { username: "weegembump" };
+  state = { username: "" };
   render() {
     const { username } = this.state;
     return (
       <div className="App">
-        <Header username={username} />
+        <Header handleUser={this.handleUser} />
         <Nav />
         <Router primary={false}>
           <HandleErrors default />
@@ -26,6 +26,9 @@ class App extends Component {
       </div>
     );
   }
+  handleUser = user => {
+    this.setState({ username: user });
+  };
 }
 
 export default App;

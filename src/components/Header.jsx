@@ -4,7 +4,13 @@ import { Link } from "@reach/router";
 import * as api from "../utils/api";
 
 class Header extends Component {
+  state = {
+    users: [],
+    loggedInAs: "Please select from below"
+  };
   render() {
+    console.log(this.state.loggedInAs, this.props);
+    const { users, loggedInAs } = this.state;
     return (
       <div className="Header">
         <Link to="/">
@@ -13,15 +19,28 @@ class Header extends Component {
           </h1>
         </Link>
         <p>
-          Logged in as:{" "}
-          <span className="text-primary">{this.props.username}</span>
+          Logged in as: <span className="text-primary">{loggedInAs}</span>
         </p>
+        <select onChange={this.handleChange}>
+          <option value="Select User">Select User</option>
+          {users.map((user, index) => {
+            return <option key={index}>{user.username}</option>;
+          })}
+        </select>
       </div>
     );
   }
   componentDidMount() {
-    api.getUsers().then(response => {});
+    api.getUsers().then(users => {
+      this.setState({ users: users.users });
+    });
   }
+
+  handleChange = event => {
+    const username = event.target.value;
+    this.props.handleUser(username);
+    this.setState({ loggedInAs: username });
+  };
 }
 
 export default Header;
