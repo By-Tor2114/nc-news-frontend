@@ -14,20 +14,30 @@ class ArticleComments extends Component {
         {isLoading && <h2>Page Loading...</h2>}
         {!isLoading && (
           <div>
-            <h2>Post New Comment:</h2>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                <textarea
-                  type="text"
-                  onChange={this.handleChange}
-                  value={commentInput}
-                  required
-                >
-                  {" "}
-                </textarea>
-                <button>Submit</button>
-              </label>
-            </form>
+            {this.props.username === "" ? (
+              <h2 className="comment-login">
+                Please select a user in the header in order to post a new
+                comment
+              </h2>
+            ) : (
+              <section>
+                <h2>Post New Comment:</h2>
+                <form onSubmit={this.handleSubmit}>
+                  <label>
+                    <textarea
+                      type="text"
+                      onChange={this.handleChange}
+                      value={commentInput}
+                      required
+                    >
+                      {" "}
+                    </textarea>
+                    <button>Submit</button>
+                  </label>
+                </form>
+              </section>
+            )}
+
             <h2>Comments</h2>
             {comments.map(comment => {
               return (

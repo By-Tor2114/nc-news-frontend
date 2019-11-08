@@ -19,7 +19,7 @@
   margin: auto;
   margin-bottom: 1rem;
   height: 15vh;
-  width: 100%;
+  width: 90%;
   font-size: 2rem;
   border: 1px solid #2d74c5;
   border-radius: 5px;
@@ -28,6 +28,16 @@
 .ArticleComments p {
   width: 70%;
   margin: 40px auto;
+}
+
+.ArticleComments div h2.comment-login {
+  font-style: italic;
+  background: #1e384e;
+  color: white;
+  border-radius: 10px;
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
 }
 
 @media (max-width: 380px) {
