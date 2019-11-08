@@ -17,16 +17,6 @@
   margin-bottom: 50px;
 }
 
-.ArticleList form select {
-  margin: 2px;
-  padding: 1px;
-  border: none;
-  border-radius: 5px;
-  background: #40739e;
-  color: white;
-  font-weight: bold;
-}
-
 .ArticleList form .Go {
   width: 40px;
   padding: 2px;

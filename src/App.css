@@ -14,6 +14,17 @@ button {
   box-shadow: 3px 3px 3px #123e72;
 }
 
+form select,
+select {
+  margin: 2px;
+  padding: 1px;
+  border: none;
+  border-radius: 5px;
+  background: #40739e;
+  color: white;
+  font-weight: bold;
+}
+
 @media (max-width: 380px) {
   button {
     padding: 4px;
