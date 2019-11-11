@@ -20,3 +20,7 @@
   text-decoration: none;
   color: white;
 }
+
+.Header button {
+  margin-bottom: 8px;
+}

@@ -14,7 +14,8 @@ class ArticleComments extends Component {
         {isLoading && <h2>Page Loading...</h2>}
         {!isLoading && (
           <div>
-            {this.props.username === "" ? (
+            {this.props.username === "Please select from below" ||
+            this.props.username === "" ? (
               <h2 className="comment-login">
                 Please select a user in the header in order to post a new
                 comment

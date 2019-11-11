@@ -20,14 +20,19 @@ class Header extends Component {
         <p>
           Logged in as: <span className="text-primary">{loggedInAs}</span>
         </p>
-        <select onChange={this.handleChange}>
-          <option value="Select User" selected disabled>
-            Select User
-          </option>
-          {users.map((user, index) => {
-            return <option key={index}>{user.username}</option>;
-          })}
-        </select>
+        {loggedInAs === "Please select from below" && (
+          <select onChange={this.handleChange}>
+            <option value="Select User" selected disabled>
+              Select User
+            </option>
+            {users.map((user, index) => {
+              return <option key={index}>{user.username}</option>;
+            })}
+          </select>
+        )}
+        {loggedInAs !== "Please select from below" && (
+          <button onClick={this.logOut}>Log Out</button>
+        )}
       </div>
     );
   }
@@ -41,6 +46,11 @@ class Header extends Component {
     const username = event.target.value;
     this.props.handleUser(username);
     this.setState({ loggedInAs: username });
+  };
+
+  logOut = () => {
+    this.props.handleUser("Please select from below");
+    this.setState({ loggedInAs: "Please select from below" });
   };
 }
 
